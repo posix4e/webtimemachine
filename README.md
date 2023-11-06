@@ -7,3 +7,7 @@ It's like a Time Machine for your browser. Search through everything you've seen
 
 ### TODO
 - [ ] chrome extension to send
+- [ ] firefox
+- [ ] ability to update in browser history
+- [ ] expiration
+- [ ] auto privacy filtering
