@@ -1,0 +1,33 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # This step checks out your repository's code
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14  # Specify the Node.js version you need
+
+    - name: Install dependencies
+      run: npm install  # Install your project's dependencies
+
+    - name: Build
+      run: npm run build  # Build your project (replace with your build command)
+
+    - name: Test
+      run: npm test  # Run tests (replace with your test command)
+
+    - name: Deploy
+      run: |
+        # Add deployment steps here (e.g., deploying to a server, cloud provider, etc.)
+        # Example: Use SSH to deploy to a server
