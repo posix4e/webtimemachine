@@ -6,7 +6,7 @@ We will start with a simple backend which stores the browser history that the cl
 
 ### Current Milestons for MVP
 - [ ] Minimum web based Time Machine (just display the urls and dates with a basic client search)
-- [ ] Minimum IOS safari extension Sends date/time, web page content, urls
+- [ ] Minimum IOS safari extension Sends date/time, web page content, urls (uses releases/tags to generate a release)
 
 ### TODO
 - [ ] LLM the web time machine
