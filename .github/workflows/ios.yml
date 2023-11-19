@@ -1,0 +1,61 @@
+name: iOS Safari Extension Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    name: Build and Test iOS Safari Extension
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Select Scheme for Safari Extension
+        run: |
+          scheme_list=$(xcodebuild -list -json | tr -d "\n")
+          safari_extension_scheme=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'].select {|target| target.include? 'Safari Extension' }[0]")
+          echo $safari_extension_scheme | cat >safari_extension_scheme
+          echo "Using Safari Extension scheme: $safari_extension_scheme"
+      
+      - name: Build Safari Extension
+        env:
+          scheme: ${{ 'safari_extension_scheme' }}
+        run: |
+          scheme=$(cat safari_extension_scheme)
+          if [ -z "$scheme" ]; then
+            echo "Safari Extension scheme not found"
+            exit 1
+          fi
+          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then
+            filetype_parameter="workspace"
+            file_to_build="`ls -A | grep -i \\.xcworkspace\$`"
+          else
+            filetype_parameter="project"
+            file_to_build="`ls -A | grep -i \\.xcodeproj\$`"
+          fi
+          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
+          xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -sdk iphonesimulator
+
+      - name: Test Safari Extension
+        env:
+          scheme: ${{ 'safari_extension_scheme' }}
+        run: |
+          scheme=$(cat safari_extension_scheme)
+          if [ -z "$scheme" ]; then
+            echo "Safari Extension scheme not found"
+            exit 1
+          fi
+          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then
+            filetype_parameter="workspace"
+            file_to_build="`ls -A | grep -i \\.xcworkspace\$`"
+          else
+            filetype_parameter="project"
+            file_to_build="`ls -A | grep -i \\.xcodeproj\$`"
+          fi
+          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
+          xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -sdk iphonesimulator
