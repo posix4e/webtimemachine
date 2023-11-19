@@ -16,13 +16,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: List all schemes
+        run: xcodebuild -list
+      
       - name: Select Scheme for Safari Extension
         run: |
-          scheme_list=$(xcodebuild -list -json | tr -d "\n")
-          safari_extension_scheme=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'].select {|target| target.include? 'Safari Extension' }[0]")
-          echo $safari_extension_scheme | cat >safari_extension_scheme
-          echo "Using Safari Extension scheme: $safari_extension_scheme"
-      
+            scheme_list=$(xcodebuild -list -json)
+            echo "$scheme_list" | jq .
+            safari_extension_scheme=$(echo "$scheme_list" | jq -r '.workspace.schemes[] | select(contains("Safari Extension"))')
+            if [ -z "$safari_extension_scheme" ]; then
+            echo "Safari Extension scheme not found"
+            exit 1
+            fi
+            echo "Safari Extension scheme found: $safari_extension_scheme"
+            echo "Safari Extension scheme is $safari_extension_scheme" > $GITHUB_ENV
+
       - name: Build Safari Extension
         env:
           scheme: ${{ 'safari_extension_scheme' }}
