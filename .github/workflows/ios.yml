@@ -11,9 +11,7 @@ jobs:
   build-and-test:
     name: Build and Test iOS Safari Extension
     runs-on: macos-latest
-    defaults: 
-        run:
-            working-directory: ./Web\ Time\ Machine
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
