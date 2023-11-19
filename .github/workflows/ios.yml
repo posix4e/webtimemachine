@@ -2,9 +2,9 @@ name: iOS Safari Extension Workflow
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "feature/chrome-history-extension" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "feature/chrome-history-extension" ]
 
 
 jobs:
