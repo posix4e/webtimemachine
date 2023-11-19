@@ -19,37 +19,9 @@ jobs:
       - name: List all schemes
         run: xcodebuild -list
       
-      - name: Select Scheme for Safari Extension
-        run: |
-            scheme_list=$(xcodebuild -list -json)
-            echo "$scheme_list" | jq .
-            safari_extension_scheme=$(echo "$scheme_list" | jq -r '.workspace.schemes[] | select(contains("Safari Extension"))')
-            if [ -z "$safari_extension_scheme" ]; then
-            echo "Safari Extension scheme not found"
-            exit 1
-            fi
-            echo "Safari Extension scheme found: $safari_extension_scheme"
-            echo "Safari Extension scheme is $safari_extension_scheme" > $GITHUB_ENV
-
       - name: Build Safari Extension
-        env:
-          scheme: ${{ 'safari_extension_scheme' }}
-        run: |
-          scheme=$(cat safari_extension_scheme)
-          if [ -z "$scheme" ]; then
-            echo "Safari Extension scheme not found"
-            exit 1
-          fi
-          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then
-            filetype_parameter="workspace"
-            file_to_build="`ls -A | grep -i \\.xcworkspace\$`"
-          else
-            filetype_parameter="project"
-            file_to_build="`ls -A | grep -i \\.xcodeproj\$`"
-          fi
-          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
-          xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -sdk iphonesimulator
-
+        run: xcodebuild build -scheme "Web Time Machine" -sdk iphonesimulator
+      
       - name: Test Safari Extension
         env:
           scheme: ${{ 'safari_extension_scheme' }}
