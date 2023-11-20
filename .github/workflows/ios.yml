@@ -20,8 +20,8 @@ jobs:
         run: xcodebuild -list
       
       - name: Build Safari Extension
-        run: xcodebuild build -target "Web Time Machine Extension (iOS)" -sdk iphonesimulator
-      
+        run: xcodebuild build -scheme "Web Time Machine (iOS)" -sdk iphonesimulator
+
       - name: Test Safari Extension
         env:
           scheme: ${{ 'safari_extension_scheme' }}
