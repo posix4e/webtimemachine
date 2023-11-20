@@ -11,7 +11,7 @@ jobs:
   build-and-test:
     defaults:
         run:
-          working-directory: ./Web\ Time\ Machine
+          working-directory: 'Web Time Machine'
     name: Build and Test iOS Safari Extension
     runs-on: macos-latest
 
