@@ -23,7 +23,7 @@ jobs:
         run: xcodebuild -list
       
       - name: Build Safari Extension
-        run: xcodebuild build -target "Web Time Machine Extension (iOS)" -sdk iphonesimulator
+        run: xcodebuild build -target "Web Time Machine Extension (iOS)" -sdk iphonesimulator OS=17.0
 
       - name: Test Safari Extension
         env:
