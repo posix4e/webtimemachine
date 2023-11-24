@@ -39,8 +39,6 @@
 		137F0D952AF9C7F700277A9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137F0D542AF9C7F500277A9C /* ViewController.swift */; };
 		137F0D962AF9C7F700277A9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 137F0D552AF9C7F700277A9C /* Assets.xcassets */; };
 		137F0D972AF9C7F700277A9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 137F0D552AF9C7F700277A9C /* Assets.xcassets */; };
-		137F0DB32AF9C7F800277A9C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 137F0DAE2AF9C7F800277A9C /* README.md */; };
-		137F0DB82AF9C7F800277A9C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 137F0DAE2AF9C7F800277A9C /* README.md */; };
 		13E24D022AFAC00700D981A3 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 13E24D012AFAC00700D981A3 /* content.js */; };
 		13E24D032AFAC00700D981A3 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 13E24D012AFAC00700D981A3 /* content.js */; };
 /* End PBXBuildFile section */
@@ -116,7 +114,6 @@
 		137F0D852AF9C7F700277A9C /* Web Time Machine Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Web Time Machine Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		137F0D8A2AF9C7F700277A9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		137F0D8B2AF9C7F700277A9C /* Web Time Machine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Web Time Machine.entitlements"; sourceTree = "<group>"; };
-		137F0DAE2AF9C7F800277A9C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../../webtimemachine/README.md; sourceTree = "<group>"; };
 		13E24D012AFAC00700D981A3 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,7 +249,6 @@
 				13564CC32B0BEF09007E905E /* background.js */,
 				13564CC62B0BEF18007E905E /* popup.html */,
 				13564CC92B0BEF25007E905E /* manifest.json */,
-				137F0DAE2AF9C7F800277A9C /* README.md */,
 				13564CBD2B0BEEC9007E905E /* styles.css */,
 				13E24D012AFAC00700D981A3 /* content.js */,
 				13564CB72B0BEE7F007E905E /* SafariWebExtensionHandler.swift */,
@@ -415,7 +411,6 @@
 			files = (
 				13564CC42B0BEF09007E905E /* background.js in Resources */,
 				13564CC72B0BEF18007E905E /* popup.html in Resources */,
-				137F0DB82AF9C7F800277A9C /* README.md in Resources */,
 				13564CCA2B0BEF25007E905E /* manifest.json in Resources */,
 				13564CBE2B0BEECA007E905E /* styles.css in Resources */,
 				13E24D022AFAC00700D981A3 /* content.js in Resources */,
@@ -429,7 +424,6 @@
 			files = (
 				13564CC52B0BEF09007E905E /* background.js in Resources */,
 				13564CC82B0BEF18007E905E /* popup.html in Resources */,
-				137F0DB32AF9C7F800277A9C /* README.md in Resources */,
 				13564CCB2B0BEF25007E905E /* manifest.json in Resources */,
 				13564CBF2B0BEECA007E905E /* styles.css in Resources */,
 				13E24D032AFAC00700D981A3 /* content.js in Resources */,
