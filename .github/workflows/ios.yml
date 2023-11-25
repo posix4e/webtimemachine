@@ -25,9 +25,8 @@ jobs:
         run: |
           xcodebuild build-for-testing -scheme "Web Time Machine (iOS)" -sdk iphonesimulator -derivedDataPath './build'
 
-      - name: Test Safari Extension Without Building
+      - name: Test Safari Extension
         run: |
-          if [ -d "./build" ]; then
             if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then
               filetype_parameter="workspace"
               file_to_build="`ls -A | grep -i \\.xcworkspace\$`"
@@ -36,8 +35,5 @@ jobs:
               file_to_build="`ls -A | grep -i \\.xcodeproj\$`"
             fi
             file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
-            xcodebuild test-without-building -scheme "Web Time Machine (iOS)" -"$filetype_parameter" "$file_to_build" -sdk iphonesimulator -derivedDataPath './build'
-          else
-            echo "Derived data not found, cannot test without building"
-            exit 1
-          fi
+            xcodebuild test-without-building -scheme "Web Time Machine (iOS)" -"$filetype_parameter" "$file_to_build" -destination 'platform=iOS Simulator,name=iPhone 13,OS=latest'
+        
