@@ -19,6 +19,8 @@
 		13564CC82B0BEF18007E905E /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 13564CC62B0BEF18007E905E /* popup.html */; };
 		13564CCA2B0BEF25007E905E /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 13564CC92B0BEF25007E905E /* manifest.json */; };
 		13564CCB2B0BEF25007E905E /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 13564CC92B0BEF25007E905E /* manifest.json */; };
+		13564CD52B11EF3A007E905E /* Web_Time_MachineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13564CD42B11EF3A007E905E /* Web_Time_MachineUITests.swift */; };
+		13564CD72B11EF3A007E905E /* Web_Time_MachineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13564CD62B11EF3A007E905E /* Web_Time_MachineUITestsLaunchTests.swift */; };
 		137F0D602AF9C7F700277A9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137F0D5F2AF9C7F700277A9C /* AppDelegate.swift */; };
 		137F0D622AF9C7F700277A9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137F0D612AF9C7F700277A9C /* SceneDelegate.swift */; };
 		137F0D652AF9C7F700277A9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137F0D632AF9C7F700277A9C /* LaunchScreen.storyboard */; };
@@ -44,6 +46,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		13564CD82B11EF3A007E905E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 137F0D492AF9C7F500277A9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 137F0D5B2AF9C7F700277A9C;
+			remoteInfo = "Web Time Machine (iOS)";
+		};
 		137F0D7D2AF9C7F700277A9C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 137F0D492AF9C7F500277A9C /* Project object */;
@@ -92,6 +101,10 @@
 		13564CC32B0BEF09007E905E /* background.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 		13564CC62B0BEF18007E905E /* popup.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
 		13564CC92B0BEF25007E905E /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		13564CCC2B11DC77007E905E /* Web Time Machine (iOS) Github.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Web Time Machine (iOS) Github.xctestplan"; sourceTree = "<group>"; };
+		13564CD22B11EF3A007E905E /* Web Time MachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Web Time MachineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13564CD42B11EF3A007E905E /* Web_Time_MachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web_Time_MachineUITests.swift; sourceTree = "<group>"; };
+		13564CD62B11EF3A007E905E /* Web_Time_MachineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web_Time_MachineUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		137F0D502AF9C7F500277A9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		137F0D512AF9C7F500277A9C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		137F0D522AF9C7F500277A9C /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
@@ -118,6 +131,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		13564CCF2B11EF3A007E905E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		137F0D592AF9C7F700277A9C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,15 +169,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13564CD32B11EF3A007E905E /* Web Time MachineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				13564CD42B11EF3A007E905E /* Web_Time_MachineUITests.swift */,
+				13564CD62B11EF3A007E905E /* Web_Time_MachineUITestsLaunchTests.swift */,
+			);
+			path = "Web Time MachineUITests";
+			sourceTree = "<group>";
+		};
 		137F0D482AF9C7F500277A9C = {
 			isa = PBXGroup;
 			children = (
+				13564CCC2B11DC77007E905E /* Web Time Machine (iOS) Github.xctestplan */,
 				137F0D4D2AF9C7F500277A9C /* Shared (App) */,
 				137F0D562AF9C7F700277A9C /* Shared (Extension) */,
 				137F0D5E2AF9C7F700277A9C /* iOS (App) */,
 				137F0D6F2AF9C7F700277A9C /* macOS (App) */,
 				137F0D7F2AF9C7F700277A9C /* iOS (Extension) */,
 				137F0D892AF9C7F700277A9C /* macOS (Extension) */,
+				13564CD32B11EF3A007E905E /* Web Time MachineUITests */,
 				137F0D5D2AF9C7F700277A9C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -198,6 +229,7 @@
 				137F0D6E2AF9C7F700277A9C /* Web Time Machine.app */,
 				137F0D7B2AF9C7F700277A9C /* Web Time Machine Extension.appex */,
 				137F0D852AF9C7F700277A9C /* Web Time Machine Extension.appex */,
+				13564CD22B11EF3A007E905E /* Web Time MachineUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,6 +292,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		13564CD12B11EF3A007E905E /* Web Time MachineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13564CDA2B11EF3B007E905E /* Build configuration list for PBXNativeTarget "Web Time MachineUITests" */;
+			buildPhases = (
+				13564CCE2B11EF3A007E905E /* Sources */,
+				13564CCF2B11EF3A007E905E /* Frameworks */,
+				13564CD02B11EF3A007E905E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13564CD92B11EF3A007E905E /* PBXTargetDependency */,
+			);
+			name = "Web Time MachineUITests";
+			productName = "Web Time MachineUITests";
+			productReference = 13564CD22B11EF3A007E905E /* Web Time MachineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		137F0D5B2AF9C7F700277A9C /* Web Time Machine (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 137F0DA02AF9C7F700277A9C /* Build configuration list for PBXNativeTarget "Web Time Machine (iOS)" */;
@@ -342,6 +392,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					13564CD12B11EF3A007E905E = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 137F0D5B2AF9C7F700277A9C;
+					};
 					137F0D5B2AF9C7F700277A9C = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -373,11 +427,19 @@
 				137F0D6D2AF9C7F700277A9C /* Web Time Machine (macOS) */,
 				137F0D7A2AF9C7F700277A9C /* Web Time Machine Extension (iOS) */,
 				137F0D842AF9C7F700277A9C /* Web Time Machine Extension (macOS) */,
+				13564CD12B11EF3A007E905E /* Web Time MachineUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		13564CD02B11EF3A007E905E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		137F0D5A2AF9C7F700277A9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,6 +496,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		13564CCE2B11EF3A007E905E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13564CD72B11EF3A007E905E /* Web_Time_MachineUITestsLaunchTests.swift in Sources */,
+				13564CD52B11EF3A007E905E /* Web_Time_MachineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		137F0D582AF9C7F700277A9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,6 +543,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		13564CD92B11EF3A007E905E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 137F0D5B2AF9C7F700277A9C /* Web Time Machine (iOS) */;
+			targetProxy = 13564CD82B11EF3A007E905E /* PBXContainerItemProxy */;
+		};
 		137F0D7E2AF9C7F700277A9C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 137F0D7A2AF9C7F700277A9C /* Web Time Machine Extension (iOS) */;
@@ -520,6 +596,45 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		13564CDB2B11EF3B007E905E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L7B5V7W6H3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eef.Web-Time-MachineUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Web Time Machine (iOS)";
+			};
+			name = Debug;
+		};
+		13564CDC2B11EF3B007E905E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L7B5V7W6H3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eef.Web-Time-MachineUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Web Time Machine (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		137F0D9A2AF9C7F700277A9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -909,6 +1024,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		13564CDA2B11EF3B007E905E /* Build configuration list for PBXNativeTarget "Web Time MachineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13564CDB2B11EF3B007E905E /* Debug */,
+				13564CDC2B11EF3B007E905E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		137F0D4C2AF9C7F500277A9C /* Build configuration list for PBXProject "Web Time Machine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
