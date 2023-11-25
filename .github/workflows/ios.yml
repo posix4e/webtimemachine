@@ -26,14 +26,7 @@ jobs:
         run: xcodebuild build -target "Web Time Machine Extension (iOS)" -sdk iphonesimulator OS=17.0
 
       - name: Test Safari Extension
-        env:
-          scheme: ${{ 'safari_extension_scheme' }}
         run: |
-          scheme=$(cat safari_extension_scheme)
-          if [ -z "$scheme" ]; then
-            echo "Safari Extension scheme not found"
-            exit 1
-          fi
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then
             filetype_parameter="workspace"
             file_to_build="`ls -A | grep -i \\.xcworkspace\$`"
@@ -42,4 +35,4 @@ jobs:
             file_to_build="`ls -A | grep -i \\.xcodeproj\$`"
           fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
-          xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -sdk iphonesimulator
+          xcodebuild test-without-building -scheme "Web Time Machine (iOS)" -"$filetype_parameter" "$file_to_build" -sdk iphonesimulator
