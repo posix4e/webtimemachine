@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  macOS (App)
-//
-//  Created by Ethan Hasbrouck on 11/6/23.
-//
-
 import Cocoa
 
 @main

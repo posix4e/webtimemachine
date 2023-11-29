@@ -1,10 +1,3 @@
-//
-//  Web_Time_MachineUITests.swift
-//  Web Time MachineUITests
-//
-//  Created by Ethan Hasbrouck on 11/25/23.
-//
-
 import XCTest
 
 final class Web_Time_MachineUITests: XCTestCase {

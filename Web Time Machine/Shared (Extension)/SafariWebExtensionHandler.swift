@@ -1,10 +1,3 @@
-//
-//  SafariWebExtensionHandler.swift
-//  Shared (Extension)
-//
-//  Created by Ethan Hasbrouck on 11/6/23.
-//
-
 import SafariServices
 import os.log
 
