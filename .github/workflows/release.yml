@@ -1,0 +1,27 @@
+name: Release Workflow
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  create-release:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Extract Tag Name
+        id: get_tag_name
+        run: echo "::set-output name=TAG_NAME::$(echo ${GITHUB_REF#refs/tags/})"
+        
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.get_tag_name.outputs.TAG_NAME }}
+          release_name: Web Time Machine ${{ steps.get_tag_name.outputs.TAG_NAME }}
+          draft: false
+          prerelease: false
