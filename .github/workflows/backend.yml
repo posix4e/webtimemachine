@@ -1,0 +1,22 @@
+name: Server Health Check
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  healthcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check if server is up
+      run: |
+        response=$(curl -o /dev/null -s -w "%{http_code}\n" https://webtimemachine.vercel.app/)
+        if [ "$response" = "200" ]; then
+          echo "Server is up"
+          exit 0
+        else
+          echo "Server is down"
+          exit 1
+        fi
