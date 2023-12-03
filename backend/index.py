@@ -5,8 +5,8 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
-def index():
-    return jsonify({"message": "Server is running"}), 200
+def home():
+    return 'Server is running'
 
 @app.route('/saveHistory', methods=['POST'])
 def save_history():
