@@ -1,12 +1,17 @@
-from flask import Flask, request, jsonify
+from flask import Flask, jsonify
 from flask_cors import CORS
+
 app = Flask(__name__)
 CORS(app)
+
+@app.route('/')
+def index():
+    return jsonify({"message": "Server is running"}), 200
+
 @app.route('/saveHistory', methods=['POST'])
 def save_history():
     data = request.json
     print(data)
-
     return jsonify({"message": "Data received successfully"}), 200
 
 if __name__ == '__main__':
