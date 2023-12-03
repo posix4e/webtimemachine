@@ -6,8 +6,3 @@ app = Flask(__name__)
 def home():
     return 'Server is running'
 
-@app.route('/saveHistory', methods=['POST'])
-def save_history():
-    data = request.json
-    print(data)
-    return jsonify({"message": "Data received successfully"}), 200
